@@ -1,0 +1,298 @@
+/* TIPOGRAFÍA */
+
+@font-face {
+  font-family: 'SingleGhost';
+  src: url('https://cdn.jsdelivr.net/gh/baechu-rpg/treeoflife@4d608ad634080f73146189bd7f3b1370d4f5f6f7/SingleGhost%20regular.ttf')
+       format('truetype');
+  font-display: swap;
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+.character-sheet {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 30px 35px;
+  background: #0b0b0d;
+  color: #e6e6e6;
+  border: 1px solid #55555b;
+  outline: 5px solid #0b0b0d;
+  font-family: Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.character-sheet *,
+.character-sheet *::before,
+.character-sheet *::after {
+  box-sizing: border-box;
+}
+
+/* DETALLES SUPERIORES */
+
+.character-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 24px;
+  color: #92929a;
+  font-size: 8px;
+  letter-spacing: 3px;
+}
+
+.character-top span:first-child {
+  color: #b93c47;
+}
+
+/* IMAGEN PRINCIPAL Y NOMBRE VERTICAL */
+
+.character-header {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 22px;
+  min-height: 340px;
+}
+
+.character-vertical {
+  flex: 0 0 55px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-align: center;
+  font-family: 'SingleGhost', serif;
+  font-size: 38px;
+  line-height: 1;
+  letter-spacing: 3px;
+  color: #f2f2f2;
+}
+
+.character-photo {
+  width: 100%;
+  max-width: 350px;
+  height: 360px;
+  padding: 5px;
+  border: 1px solid #696970;
+  position: relative;
+}
+
+.character-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* NOMBRE Y CITA */
+
+.character-intro {
+  padding: 34px 0 28px;
+  text-align: center;
+}
+
+.character-name {
+  font-family: 'SingleGhost', serif;
+  font-size: clamp(35px, 8vw, 58px);
+  line-height: 1.2;
+  color: #f1f1f1;
+  overflow-wrap: anywhere;
+}
+
+.character-quote {
+  max-width: 360px;
+  margin: 12px auto 0;
+  color: #aaaab2;
+  font-family: Georgia, serif;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+/* DATOS DEL PERSONAJE */
+
+.character-data {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  border-top: 1px solid #55555b;
+  border-bottom: 1px solid #55555b;
+  padding: 20px 0;
+}
+
+.character-data-item {
+  min-width: 0;
+  text-align: center;
+}
+
+.character-data-item span {
+  display: block;
+  margin-bottom: 9px;
+  color: #b93c47;
+  font-size: 8px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.character-data-item strong,
+.character-data-item a {
+  color: #e7e7e7;
+  font-size: 12px;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.character-data-item a {
+  border-bottom: 1px solid #b93c47;
+  padding-bottom: 3px;
+}
+
+/* SECCIÓN DE PERSONALIDAD */
+
+.character-section {
+  margin-top: 40px;
+  padding: 28px;
+  border: 1px solid #62626a;
+  position: relative;
+}
+
+.character-section::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  width: 20px;
+  height: 20px;
+  border-top: 1px solid #7c7c84;
+  border-right: 1px solid #7c7c84;
+}
+
+.character-section-number {
+  font-size: 8px;
+  color: #bb424b;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.character-section-title {
+  font-family: 'SingleGhost', serif;
+  font-size: clamp(28px, 6vw, 43px);
+  color: #f0f0f0;
+  line-height: 1.3;
+  margin-bottom: 26px;
+  overflow-wrap: anywhere;
+}
+
+/* TEXTO DE PERSONALIDAD */
+
+.character-text {
+  font-family: Arial, sans-serif;
+  color: #d1d1d6;
+  font-size: 12px;
+  line-height: 1.85;
+  text-align: justify;
+  overflow-wrap: anywhere;
+}
+
+.character-text p {
+  margin: 0 0 18px;
+}
+
+.character-text b,
+.character-text strong {
+  color: #c4454e;
+  font-weight: bold;
+}
+
+.character-text i {
+  color: #f0f0f0;
+}
+
+.character-text u {
+  text-decoration-color: #c4454e;
+  text-underline-offset: 3px;
+}
+
+/* GALERÍA AESTHETIC */
+
+.character-aesthetic {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px;
+  width: 100%;
+  margin: 30px 0;
+}
+
+.character-aesthetic img {
+  display: block;
+  width: 100%;
+  height: 145px;
+  object-fit: cover;
+  border: 1px solid #34343b;
+}
+
+/* PIE DE FICHA */
+
+.character-footer {
+  margin-top: 30px;
+  padding-top: 17px;
+  border-top: 1px solid #45454b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #8e8e97;
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+.character-footer span:last-child {
+  color: #bd404a;
+  font-size: 20px;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 480px) {
+
+  .character-sheet {
+    padding: 20px 15px;
+  }
+
+  .character-header {
+    gap: 10px;
+    min-height: 250px;
+  }
+
+  .character-vertical {
+    flex-basis: 38px;
+    font-size: 26px;
+  }
+
+  .character-photo {
+    height: 275px;
+  }
+
+  .character-section {
+    padding: 18px;
+  }
+
+  .character-aesthetic img {
+    height: 100px;
+  }
+
+  .character-data {
+    gap: 6px;
+  }
+
+  .character-data-item span {
+    letter-spacing: 1px;
+    font-size: 7px;
+  }
+
+  .character-data-item strong,
+  .character-data-item a {
+    font-size: 10px;
+  }
+
+}
